@@ -1,0 +1,3 @@
+[submodule "ube-train-timetable"]
+	path = ube-train-timetable
+	url = https://github.com/kaiteen1003/TrainTimetable.git

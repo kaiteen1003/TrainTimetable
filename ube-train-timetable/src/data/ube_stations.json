@@ -1,0 +1,29 @@
+[
+  {
+    "station_name": "宇部",
+    "line": "山陽本線",
+    "timetable": [
+      { "hour": 6, "minutes": [12, 45] },
+      { "hour": 7, "minutes": [10, 35, 58] },
+      { "hour": 8, "minutes": [20, 55] }
+    ]
+  },
+  {
+    "station_name": "宇部新川",
+    "line": "宇部線",
+    "timetable": [
+      { "hour": 6, "minutes": [5, 40] },
+      { "hour": 7, "minutes": [15, 30, 50] },
+      { "hour": 8, "minutes": [25, 50] }
+    ]
+  },
+  {
+    "station_name": "琴芝",
+    "line": "宇部線",
+    "timetable": [
+      { "hour": 6, "minutes": [8, 42] },
+      { "hour": 7, "minutes": [12, 36, 59] },
+      { "hour": 8, "minutes": [23, 48] }
+    ]
+  }
+]

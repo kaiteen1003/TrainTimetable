@@ -12,6 +12,8 @@ export interface TrainSchedule {
 export const trainSchedules: TrainSchedule[] = [
   // 新山口方面（宇部発）
   //この書き方に従って埋めていきたいです。
+  //個人的には駅を選んで、その駅にいつ次の電車が来るかを表示したいです。
+  //方面は基本二つしかないので、同時に表示してもいいかもしれません。
   {
     line: "宇部線",
     direction: "新山口方面",

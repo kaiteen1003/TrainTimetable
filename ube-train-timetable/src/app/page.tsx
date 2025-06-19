@@ -65,7 +65,7 @@ export default function Home() {
       <div className="max-w-4xl mx-auto">
         {/* タイトル */}
         <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">
-          電車ダイヤ
+          NxTrain
         </h1>
 
         {/* 現在時刻表示 */}

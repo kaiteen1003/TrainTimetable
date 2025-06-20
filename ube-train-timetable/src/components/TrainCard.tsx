@@ -37,7 +37,7 @@ export const TrainCard: React.FC<TrainCardProps> = ({ schedule }) => {
   }, [selectedStation, schedule]);
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 mb-4">
+    <div className="bg-white rounded-lg shadow-2xs p-6 mb-4">
       <h2 className="text-xl font-semibold mb-4 text-gray-800">
         {schedule.line} {schedule.direction}
       </h2>

@@ -11,11 +11,35 @@ export interface TrainSchedule {
 }
 
 export const trainSchedules: TrainSchedule[] = [
-  //新山口方面（宇部発）
+  //新山口方面（宇部発）、新山口駅からは出発しようがないので削除
   //この書き方に従って埋めていきたいです。
   //個人的には駅を選んで、その駅にいつ次の電車が来るかを表示したいです。
-  //宇部線の宇部駅に限っては片方のみでオケマル
-    {
+  //宇部線の宇部駅に限っては片方のみでオケマル。
+  {
+    // 暫定的にこのカタマリを一番上に配置する。
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [
+      { station: "宇部", time: "06:23" },
+      { station: "岩鼻", time: "06:29" },
+      { station: "居能", time: "06:32" },
+      { station: "宇部新川", time: "06:47" },
+      { station: "琴芝", time: "06:49" },
+      { station: "東新川", time: "06:51" },
+      { station: "宇部岬", time: "06:55" },
+      { station: "草江", time: "06:57" },
+      { station: "常盤", time: "07:00" },
+      { station: "床波", time: "07:11" },
+      { station: "丸尾", time: "07:01" },
+      { station: "岐波", time: "07:15" },
+      { station: "阿知須", time: "07:20" },
+      { station: "岩倉", time: "07:23" },
+      { station: "周防佐山", time: "07:25" },
+      { station: "深溝", time: "07:33" },
+      { station: "上嘉川", time: "07:38" },
+    ],
+  },
+  {
     line: "宇部線",
     direction: "新山口方面",
     times: [
@@ -53,29 +77,6 @@ export const trainSchedules: TrainSchedule[] = [
       { station: "周防佐山", time: "06:57" },
       { station: "深溝", time: "07:04" },
       { station: "上嘉川", time: "07:08" },
-    ],
-  },
-  {
-    line: "宇部線",
-    direction: "新山口方面",
-    times: [
-      { station: "宇部", time: "06:23" },
-      { station: "岩鼻", time: "06:29" },
-      { station: "居能", time: "06:32" },
-      { station: "宇部新川", time: "06:47" },
-      { station: "琴芝", time: "06:49" },
-      { station: "東新川", time: "06:51" },
-      { station: "宇部岬", time: "06:55" },
-      { station: "草江", time: "06:57" },
-      { station: "常盤", time: "07:00" },
-      { station: "床波", time: "07:11" },
-      { station: "丸尾", time: "07:01" },
-      { station: "岐波", time: "07:15" },
-      { station: "阿知須", time: "07:20" },
-      { station: "岩倉", time: "07:23" },
-      { station: "周防佐山", time: "07:25" },
-      { station: "深溝", time: "07:33" },
-      { station: "上嘉川", time: "07:38" },
     ],
   },
   {
@@ -494,6 +495,160 @@ export const trainSchedules: TrainSchedule[] = [
       { station: "周防佐山", time: "22:07" },
       { station: "深溝", time: "22:12" },
       { station: "上嘉川", time: "22:17" },
+    ],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [
+      { station: "宇部", time: "22:23" },
+      { station: "岩鼻", time: "22:28" },
+      { station: "居能", time: "22:31" },
+    ],
+  },
+  // 宇部方面（新山口発）、宇部駅からは出発しようがないので削除
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [
+      { station: "新山口", time: "05:55" },
+      { station: "上嘉川", time: "06:00" },
+    ],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [
+      { station: "新山口", time: "06:29" },
+      { station: "上嘉川", time: "06:34" },
+    ],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [
+      { station: "新山口", time: "06:53" },
+      { station: "上嘉川", time: "06:58" },
+    ],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [
+      { station: "新山口", time: "07:24" },
+      { station: "上嘉川", time: "07:28" },
+    ],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [
+      { station: "新山口", time: "08:28" },
+      { station: "上嘉川", time: "08:33" },
+    ],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [
+      { station: "新山口", time: "09:24" },
+      { station: "上嘉川", time: "09:29" },
+    ],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [
+      { station: "新山口", time: "10:19" },
+      { station: "上嘉川", time: "10:24" },
+    ],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [
+      { station: "新山口", time: "12:02" },
+      { station: "上嘉川", time: "12:07" },
+    ],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [
+      { station: "新山口", time: "13:18" },
+      { station: "上嘉川", time: "13:23" },
+    ],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [
+      { station: "新山口", time: "14:40" },
+      { station: "上嘉川", time: "14:44" },
+    ],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [
+      { station: "新山口", time: "15:27" },
+      { station: "上嘉川", time: "15:32" },
+    ],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [
+      { station: "新山口", time: "16:21" },
+      { station: "上嘉川", time: "16:26" },
+    ],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [
+      { station: "新山口", time: "17:11" },
+      { station: "上嘉川", time: "17:16" },
+    ],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [
+      { station: "新山口", time: "18:26" },
+      { station: "上嘉川", time: "18:30" },
+    ],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [
+      { station: "新山口", time: "19:07" },
+      { station: "上嘉川", time: "19:12" },
+    ],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [
+      { station: "新山口", time: "19:57" },
+      { station: "上嘉川", time: "20:02" },
+    ],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [
+      { station: "新山口", time: "20:54" },
+      { station: "上嘉川", time: "20:59" },
+    ],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [
+      { station: "新山口", time: "22:02" },
+      { station: "上嘉川", time: "22:07" },
     ],
   },
 ];

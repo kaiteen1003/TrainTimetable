@@ -95,7 +95,7 @@ export default function Home() {
           {/* 行き先選択セレクトボックス */}
           <div className="mb-6">
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              行き先を選択
+              方面を選択
             </label>
             <select
               value={selectedDirection}

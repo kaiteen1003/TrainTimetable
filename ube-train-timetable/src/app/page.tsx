@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"; // Reactのステートと副作用フックをインポート
 import { TrainCard } from "../components/TrainCard"; // 電車の情報を表示するコンポーネント
 import ClockDisplay from "../components/ClockDisplay"; // 現在時刻を表示するコンポーネント
+import QrReaderCard from "../components/QrReaderCard";
 
 // データ取得用の関数や型をインポート
 import {
@@ -68,7 +69,7 @@ export default function Home() {
         <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">
           NxTrain
         </h1>
-
+        <QrReaderCard />
         {/* 現在時刻表示（nowがセットされているときのみ表示） */}
         {now && <ClockDisplay now={now} />}
 
@@ -94,7 +95,7 @@ export default function Home() {
 
           {/* 行き先選択セレクトボックス */}
           <div className="mb-6">
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="blocedck text-sm font-medium text-gray-700 mb-2">
               方面を選択
             </label>
             <select

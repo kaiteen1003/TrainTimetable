@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { TrainSchedule } from "../data/trainData";
 import { getNextTrain, getWaitingTime } from "../data/trainData";
+import { updateList } from "../data/findNearestSchedule";
 
 interface TrainCardProps {
   schedule: TrainSchedule;
@@ -10,22 +11,32 @@ interface TrainCardProps {
 
 export const TrainCard: React.FC<TrainCardProps> = ({ schedule }) => {
   const [selectedStation, setSelectedStation] = useState<string>("");
+  const [selectedSchedule, setSelectedSchedule] = useState<TrainSchedule | null>(null);
   const [nextTrainInfo, setNextTrainInfo] = useState<{
     time: string;
     waitingTime: string;
   } | null>(null);
 
-  useEffect(() => {
-    if (selectedStation) {
+useEffect(() => {
+  if (selectedStation) {
+    const nearest =  updateList(
+      schedule.line,
+      schedule.direction,
+      selectedStation
+    );
+      console.log("最近のスケジュール:", nearest); // ←ここで実際に16時台が選ばれてるか確認
+    if (nearest) {
+      setSelectedSchedule(nearest);
+
       const nextTrain = getNextTrain(
-        schedule.line,
-        schedule.direction,
+        nearest.line,
+        nearest.direction,
         selectedStation
       );
       if (nextTrain) {
         const waitingTime = getWaitingTime(
-          schedule.line,
-          schedule.direction,
+          nearest.line,
+          nearest.direction,
           selectedStation
         );
         setNextTrainInfo({
@@ -34,7 +45,9 @@ export const TrainCard: React.FC<TrainCardProps> = ({ schedule }) => {
         });
       }
     }
-  }, [selectedStation, schedule]);
+  }
+}, [selectedStation]);
+
 
   return (
     <div className="bg-white rounded-lg shadow-2xs p-6 mb-4">
@@ -63,8 +76,8 @@ export const TrainCard: React.FC<TrainCardProps> = ({ schedule }) => {
       {nextTrainInfo && (
         <div className="mb-4 p-4 bg-blue-50 rounded-lg">
           <h3 className="text-lg font-medium text-blue-800 mb-2">次の電車</h3>
-          <p className="text-blue-600">到着時刻: {nextTrainInfo.time}</p>
-          <p className="text-blue-600">待ち時間: {nextTrainInfo.waitingTime}</p>
+          <p className="text-blue-600">出発時刻: {nextTrainInfo.time}</p>
+          <p className="text-blue-600">残り時間: {nextTrainInfo.waitingTime}</p>
         </div>
       )}
 
@@ -81,7 +94,7 @@ export const TrainCard: React.FC<TrainCardProps> = ({ schedule }) => {
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
-            {schedule.times.map((time, index) => (
+          {(selectedSchedule ?? schedule).times.map((time, index) => (
               <tr
                 key={index}
                 className={`hover:bg-gray-50 ${

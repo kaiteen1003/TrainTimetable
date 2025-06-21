@@ -63,8 +63,8 @@ export const TrainCard: React.FC<TrainCardProps> = ({ schedule }) => {
       {nextTrainInfo && (
         <div className="mb-4 p-4 bg-blue-50 rounded-lg">
           <h3 className="text-lg font-medium text-blue-800 mb-2">次の電車</h3>
-          <p className="text-blue-600">到着時刻: {nextTrainInfo.time}</p>
-          <p className="text-blue-600">待ち時間: {nextTrainInfo.waitingTime}</p>
+          <p className="text-blue-600">出発時刻: {nextTrainInfo.time}</p>
+          <p className="text-blue-600">残り時間: {nextTrainInfo.waitingTime}</p>
         </div>
       )}
 

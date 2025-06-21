@@ -10,15 +10,15 @@ export interface TrainSchedule {
 }
 
 export const trainSchedules: TrainSchedule[] = [
-  // 新山口方面（宇部発）
+  //新山口方面（宇部発）
   //この書き方に従って埋めていきたいです。
   //個人的には駅を選んで、その駅にいつ次の電車が来るかを表示したいです。
-  //方面は基本二つしかないので、同時に表示してもいいかもしれません。
+  //宇部線の宇部駅に限っては片方のみでオケマル
   {
     line: "宇部線",
     direction: "新山口方面",
     times: [
-      { station: "宇部", time: "05:22" },
+      { station: "宇部", time: "06:23" },
       { station: "岩鼻", time: "05:28" },
       { station: "居能", time: "05:31" },
       { station: "宇部新川", time: "05:37" },
@@ -42,7 +42,7 @@ export const trainSchedules: TrainSchedule[] = [
     line: "宇部線",
     direction: "新山口方面",
     times: [
-      { station: "宇部", time: "06:22" },
+      { station: "宇部", time: "06:44" },
       { station: "岩鼻", time: "06:28" },
       { station: "居能", time: "06:31" },
       { station: "宇部新川", time: "06:37" },
@@ -66,7 +66,7 @@ export const trainSchedules: TrainSchedule[] = [
     line: "宇部線",
     direction: "新山口方面",
     times: [
-      { station: "宇部", time: "07:22" },
+      { station: "宇部", time: "07:31" },
       { station: "岩鼻", time: "07:28" },
       { station: "居能", time: "07:31" },
       { station: "宇部新川", time: "07:37" },
@@ -86,7 +86,103 @@ export const trainSchedules: TrainSchedule[] = [
       { station: "新山口", time: "08:27" },
     ],
   },
-  // 宇部方面（新山口発）
+  {
+    // 以下宇部駅のみ追加
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [{ station: "宇部", time: "07:46" }],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [{ station: "宇部", time: "08:06" }],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [{ station: "宇部", time: "08:31" }],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [{ station: "宇部", time: "09:00" }],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [{ station: "宇部", time: "09:51" }],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [{ station: "宇部", time: "11:19" }],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [{ station: "宇部", time: "12:52" }],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [{ station: "宇部", time: "14:13" }],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [{ station: "宇部", time: "14:59" }],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [{ station: "宇部", time: "15:54" }],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [{ station: "宇部", time: "16:45" }],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [{ station: "宇部", time: "17:14" }],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [{ station: "宇部", time: "17:39" }],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [{ station: "宇部", time: "18:22" }],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [{ station: "宇部", time: "19:21" }],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [{ station: "宇部", time: "19:59" }],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [{ station: "宇部", time: "20:28" }],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [{ station: "宇部", time: "21:14" }],
+  },
+  {
+    line: "宇部線",
+    direction: "新山口方面",
+    times: [{ station: "宇部", time: "22:23" }],
+  },
+  // 宇部方面（新山口発など）
   {
     line: "宇部線",
     direction: "宇部方面",
@@ -159,7 +255,6 @@ export const trainSchedules: TrainSchedule[] = [
       { station: "宇部", time: "09:00" },
     ],
   },
-  // 宇部方面の時刻表（逆方向）
   {
     line: "宇部線",
     direction: "宇部方面",

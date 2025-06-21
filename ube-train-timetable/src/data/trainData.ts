@@ -1,3 +1,4 @@
+
 export interface TrainTime {
   station: string;
   time: string;
@@ -508,7 +509,7 @@ export const trainSchedules: TrainSchedule[] = [
   // 宇部方面（新山口発）、宇部駅からは出発しようがないので削除
   {
     line: "宇部線",
-    direction: "宇部方面",
+    direction: "新山口方面",
     times: [
       { station: "新山口", time: "05:55" },
       { station: "上嘉川", time: "06:00" },
@@ -516,7 +517,7 @@ export const trainSchedules: TrainSchedule[] = [
   },
   {
     line: "宇部線",
-    direction: "宇部方面",
+    direction: "新山口方面",
     times: [
       { station: "新山口", time: "06:29" },
       { station: "上嘉川", time: "06:34" },
@@ -524,7 +525,7 @@ export const trainSchedules: TrainSchedule[] = [
   },
   {
     line: "宇部線",
-    direction: "宇部方面",
+    direction: "新山口方面",
     times: [
       { station: "新山口", time: "06:53" },
       { station: "上嘉川", time: "06:58" },
@@ -532,7 +533,7 @@ export const trainSchedules: TrainSchedule[] = [
   },
   {
     line: "宇部線",
-    direction: "宇部方面",
+    direction: "新山口方面",
     times: [
       { station: "新山口", time: "07:24" },
       { station: "上嘉川", time: "07:28" },
@@ -540,7 +541,7 @@ export const trainSchedules: TrainSchedule[] = [
   },
   {
     line: "宇部線",
-    direction: "宇部方面",
+    direction: "新山口方面",
     times: [
       { station: "新山口", time: "08:28" },
       { station: "上嘉川", time: "08:33" },
@@ -548,7 +549,7 @@ export const trainSchedules: TrainSchedule[] = [
   },
   {
     line: "宇部線",
-    direction: "宇部方面",
+    direction: "新山口方面",
     times: [
       { station: "新山口", time: "09:24" },
       { station: "上嘉川", time: "09:29" },
@@ -556,7 +557,7 @@ export const trainSchedules: TrainSchedule[] = [
   },
   {
     line: "宇部線",
-    direction: "宇部方面",
+    direction: "新山口方面",
     times: [
       { station: "新山口", time: "10:19" },
       { station: "上嘉川", time: "10:24" },
@@ -564,7 +565,7 @@ export const trainSchedules: TrainSchedule[] = [
   },
   {
     line: "宇部線",
-    direction: "宇部方面",
+    direction: "新山口方面",
     times: [
       { station: "新山口", time: "12:02" },
       { station: "上嘉川", time: "12:07" },
@@ -572,7 +573,7 @@ export const trainSchedules: TrainSchedule[] = [
   },
   {
     line: "宇部線",
-    direction: "宇部方面",
+    direction: "新山口方面",
     times: [
       { station: "新山口", time: "13:18" },
       { station: "上嘉川", time: "13:23" },
@@ -580,7 +581,7 @@ export const trainSchedules: TrainSchedule[] = [
   },
   {
     line: "宇部線",
-    direction: "宇部方面",
+    direction: "新山口方面",
     times: [
       { station: "新山口", time: "14:40" },
       { station: "上嘉川", time: "14:44" },
@@ -588,7 +589,7 @@ export const trainSchedules: TrainSchedule[] = [
   },
   {
     line: "宇部線",
-    direction: "宇部方面",
+    direction: "新山口方面",
     times: [
       { station: "新山口", time: "15:27" },
       { station: "上嘉川", time: "15:32" },
@@ -596,7 +597,7 @@ export const trainSchedules: TrainSchedule[] = [
   },
   {
     line: "宇部線",
-    direction: "宇部方面",
+    direction: "新山口方面",
     times: [
       { station: "新山口", time: "16:21" },
       { station: "上嘉川", time: "16:26" },
@@ -604,7 +605,7 @@ export const trainSchedules: TrainSchedule[] = [
   },
   {
     line: "宇部線",
-    direction: "宇部方面",
+    direction: "新山口方面",
     times: [
       { station: "新山口", time: "17:11" },
       { station: "上嘉川", time: "17:16" },
@@ -612,7 +613,7 @@ export const trainSchedules: TrainSchedule[] = [
   },
   {
     line: "宇部線",
-    direction: "宇部方面",
+    direction: "新山口方面",
     times: [
       { station: "新山口", time: "18:26" },
       { station: "上嘉川", time: "18:30" },
@@ -620,7 +621,7 @@ export const trainSchedules: TrainSchedule[] = [
   },
   {
     line: "宇部線",
-    direction: "宇部方面",
+    direction: "新山口方面",
     times: [
       { station: "新山口", time: "19:07" },
       { station: "上嘉川", time: "19:12" },
@@ -628,7 +629,7 @@ export const trainSchedules: TrainSchedule[] = [
   },
   {
     line: "宇部線",
-    direction: "宇部方面",
+    direction: "新山口方面",
     times: [
       { station: "新山口", time: "19:57" },
       { station: "上嘉川", time: "20:02" },
@@ -636,7 +637,7 @@ export const trainSchedules: TrainSchedule[] = [
   },
   {
     line: "宇部線",
-    direction: "宇部方面",
+    direction: "新山口方面",
     times: [
       { station: "新山口", time: "20:54" },
       { station: "上嘉川", time: "20:59" },
@@ -644,7 +645,7 @@ export const trainSchedules: TrainSchedule[] = [
   },
   {
     line: "宇部線",
-    direction: "宇部方面",
+    direction: "新山口方面",
     times: [
       { station: "新山口", time: "22:02" },
       { station: "上嘉川", time: "22:07" },
@@ -690,38 +691,34 @@ export const getNextTrain = (
   direction: string,
   station: string
 ): TrainTime | null => {
-  const schedule = getSchedule(line, direction);
-  if (!schedule) return null;
-
   const now = new Date();
   const currentMinutes = now.getHours() * 60 + now.getMinutes();
 
-  // 指定された駅の時刻を取得
-  const stationTime = schedule.times.find((time) => time.station === station);
-  if (!stationTime) return null;
-
-  const trainMinutes = timeToMinutes(stationTime.time);
-
-  // 現在時刻より後の電車を探す
-  if (trainMinutes > currentMinutes) {
-    return stationTime;
-  }
-
-  // 翌日の電車を探す
-  const nextDaySchedule = trainSchedules.find(
+  // 同一路線・同一方向のすべての電車から、駅の時刻を収集
+  const matchingTrains = trainSchedules.filter(
     (s) => s.line === line && s.direction === direction
   );
-  if (nextDaySchedule) {
-    const nextDayTime = nextDaySchedule.times.find(
-      (time) => time.station === station
-    );
-    if (nextDayTime) {
-      return nextDayTime;
+
+  const futureTimes: TrainTime[] = [];
+
+  for (const train of matchingTrains) {
+    const time = train.times.find((t) => t.station === station);
+    if (!time) continue;
+
+    const timeMinutes = timeToMinutes(time.time);
+    if (timeMinutes >= currentMinutes) {
+      futureTimes.push(time);
     }
   }
 
-  return null;
+  // 最も早い電車を取得
+  if (futureTimes.length === 0) return null;
+
+  return futureTimes.reduce((a, b) =>
+    timeToMinutes(a.time) < timeToMinutes(b.time) ? a : b
+  );
 };
+
 
 // 指定された駅の次の電車までの待ち時間を計算する関数
 export function getWaitingTime(

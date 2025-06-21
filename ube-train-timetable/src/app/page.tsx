@@ -19,7 +19,7 @@ export default function Home() {
   const [lines, setLines] = useState<string[]>([]); // 路線一覧
   const [directions, setDirections] = useState<string[]>([]); // 行き先一覧
   const [schedules, setSchedules] = useState<TrainSchedule[]>([]); // ダイヤ情報
-  const [now, setNow] = useState(new Date()); // 現在時刻
+  const [now, setNow] = useState<Date | null>(null); // 現在時刻（初期値はnull）
 
   // 初回マウント時に路線一覧を取得し、最初の路線を選択状態に設定
   useEffect(() => {
@@ -53,6 +53,7 @@ export default function Home() {
 
   // 現在時刻を1秒ごとに更新（ClockDisplayに渡すため）
   useEffect(() => {
+    setNow(new Date()); // 初回マウント時に現在時刻をセット
     const timer = setInterval(() => {
       setNow(new Date());
     }, 1000);
@@ -68,11 +69,11 @@ export default function Home() {
           NxTrain
         </h1>
 
-        {/* 現在時刻表示 */}
-        <ClockDisplay now={now} />
+        {/* 現在時刻表示（nowがセットされているときのみ表示） */}
+        {now && <ClockDisplay now={now} />}
 
         {/* 選択フォーム：路線と行き先 */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+        <div className="bg-white rounded-lg shadow-2xs p-6 mb-8">
           {/* 路線選択セレクトボックス */}
           <div className="mb-6">
             <label className="block text-sm font-medium text-gray-700 mb-2">

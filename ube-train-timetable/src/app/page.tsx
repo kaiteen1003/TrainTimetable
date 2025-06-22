@@ -63,12 +63,25 @@ export default function Home() {
 
   // JSXの描画
   return (
-    <main className="min-h-screen p-8 bg-gray-100">
+    <main className="min-h-screen  bg-gray-100">
+      <div className="relative w-full  ">
+      {/* 背景画像 */}
+      <img
+        src="/images/Mainbg.png"
+        alt="観光背景"
+        className="w-full h-auto object-cover"
+      />
+
+      {/* キャッチコピー */}
+      <div className="absolute inset-0 flex items-center justify-center">
+<h1 className="text-white text-8xl md:text-6xl font-bold drop-shadow-lg text-center px-4 animate-fadeInUp">
+  次の発車は、<br className="md:hidden" />
+  思い出行き。
+</h1>
+
+      </div>
+    </div>
       <div className="max-w-4xl mx-auto">
-        {/* タイトル */}
-        <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">
-          NxTrain
-        </h1>
         <QrReaderCard />
         {/* 現在時刻表示（nowがセットされているときのみ表示） */}
         {now && <ClockDisplay now={now} />}

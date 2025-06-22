@@ -76,8 +76,8 @@ useEffect(() => {
       {nextTrainInfo && (
         <div className="mb-4 p-4 bg-blue-50 rounded-lg">
           <h3 className="text-lg font-medium text-blue-800 mb-2">次の電車</h3>
-          <p className="text-blue-600">出発時刻: {nextTrainInfo.time}</p>
-          <p className="text-blue-600">残り時間: {nextTrainInfo.waitingTime}</p>
+          <p className="text-blue-600 text-3xl">出発時刻: <span className="font-bold text-5xl align-middle">{nextTrainInfo.time}</span></p>
+          <p className="text-blue-600 text-xl">残り時間: <span className="font-bold text-3xl align-middle">{nextTrainInfo.waitingTime}</span></p>
         </div>
       )}
 
@@ -88,7 +88,7 @@ useEffect(() => {
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 駅名
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider text-2xl">
                 時刻
               </th>
             </tr>
@@ -101,14 +101,10 @@ useEffect(() => {
                   selectedStation === time.station ? "bg-blue-50" : ""
                 }`}
               >
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                  {time.station}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                  {time.time}
-                </td>
+                <td className="px-6 py-4 whitespace-nowrap text-lg">{time.station}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-3xl font-bold text-blue-800">{time.time}</td>
               </tr>
-            ))}
+          ))}
           </tbody>
         </table>
       </div>

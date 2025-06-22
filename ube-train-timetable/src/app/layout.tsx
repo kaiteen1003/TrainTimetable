@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/ui/Header";
+import { Noto_Sans_JP } from "next/font/google";
+const notoSans = Noto_Sans_JP({
+  weight: ["400", "700"], // お好みで太さを指定
+  subsets: ["latin"],     // 必ず入れる（latin or latin-ext or japanese）
+  display: "swap",        // 推奨オプション
+});
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,8 +33,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${notoSans.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Header />
         {children}
       </body>
     </html>

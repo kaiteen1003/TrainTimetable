@@ -83,12 +83,15 @@ export default function Home() {
     </div>
       <div className="max-w-4xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* タイトル */}
         <h1 className="text-6xl font-bold text-center mb-8 text-gray-800">
           NxTrain
         </h1>
 =======
 >>>>>>> c8fcdf800549259341d0e84cdb00f2f6b2592c8a
+=======
+>>>>>>> f45264a0423e005da6deb6f00eff1e60b35119dd
         <QrReaderCard />
         {/* 現在時刻表示（nowがセットされているときのみ表示） */}
         {now && <ClockDisplay now={now} />}
